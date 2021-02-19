@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMI">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="45dp"
+        android:text="@string/welcome"
+        app:layout_constraintBottom_toTopOf="@+id/textViewWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="45dp"
+        android:text="@string/weight"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHeight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/weight2"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWeight"
+        app:layout_constraintStart_toEndOf="@+id/textViewWeight"
+        app:layout_constraintTop_toTopOf="@+id/textViewWeight" />
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="45dp"
+        android:text="@string/height"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStatus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/height2"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewHeight"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeight"
+        app:layout_constraintTop_toTopOf="@+id/textViewHeight" />
+
+    <TextView
+        android:id="@+id/textViewKg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/kg"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextWeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextWeight" />
+
+    <TextView
+        android:id="@+id/textViewCm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/cm"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextHeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextHeight" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeight" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="372dp"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWelcome"
+        app:layout_constraintStart_toEndOf="@+id/textViewWelcome"
+        app:layout_constraintTop_toTopOf="@+id/textViewWelcome" />
+
+    <TextView
+        android:id="@+id/textViewStatusDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewStatus"
+        app:layout_constraintStart_toEndOf="@+id/textViewStatus"
+        app:layout_constraintTop_toTopOf="@+id/textViewStatus" />
+</androidx.constraintlayout.widget.ConstraintLayout>
